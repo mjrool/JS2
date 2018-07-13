@@ -11,7 +11,7 @@ de un segundo, al volver hacer click debe volver a estar en blanco y negro.
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Galeria de imagenes con JQuery</title>
 
 
 	<!-- Latest compiled and minified CSS -->
@@ -29,6 +29,12 @@ de un segundo, al volver hacer click debe volver a estar en blanco y negro.
 
 <link rel="stylesheet" type="text/css" href="style.css">
 
+<style>
+	.color{
+		
+	}
+
+</style>
 
   </head>
   <body>
@@ -44,11 +50,25 @@ de un segundo, al volver hacer click debe volver a estar en blanco y negro.
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
 		<script>
+
+			$(window).ready(function(){
+			alert("DOM")
+		});
+		
+
+		$(window).on('load', function(){
+			alert("pagina cargada")
+		});
+
 			$(".featured").attr("src","https://drscdn.500px.org/photo/164974455/m%3D900_s%3D1_k%3D1_a%3D1/v2?webp=true&v=3&sig=5e48f0aaf84bc23ef39faa687050a11be8e99f8b103cdbcf16ef3a3831c68612")
 
 			$(".thumb").on("click", function(){
 				source = $(this).attr("src");
 				$(".featured").attr("src", source);
+			})
+
+			$(".featured").on("click", function(){
+				$(".featured").addClass("color");
 			})
 
 		</script>

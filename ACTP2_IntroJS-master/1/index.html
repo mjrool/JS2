@@ -16,8 +16,28 @@ Tip: Investigar el evento window.onload
   </head>
   <body>
 
+  	<img class="thumb" src="https://drscdn.500px.org/photo/164974455/m%3D900_s%3D1_k%3D1_a%3D1/v2?webp=true&v=3&sig=5e48f0aaf84bc23ef39faa687050a11be8e99f8b103cdbcf16ef3a3831c68612">
+  	<img class="thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSedn8RXSpntnqp7u77R-e4GlVRFR7xqgQtHGeynTZoYV9C2_dp">
+  	<img class="thumb" src="https://drscdn.500px.org/photo/37418376/m%3D900/v2?webp=true&sig=303088a01327060a16c2565a9d97b484db11911bb791562f05d2d9fbb652f75a">
+
 	<script>
-		$(function(){
+// $( document ).ready(function() {
+ //   console.log( "DOM cargado" );
+//	});  
+
+
+//		$(function(){
+//			alert("cargaddo el DOM")
+//		});       
+
+//el anterior no sirve ya que aparece antes de cargadas las imagenes, y la idea es que aparezca cuando esta todo cargado//
+
+		$(window).ready(function(){
+			alert("DOM")
+		});
+		
+
+		$(window).on('load', function(){
 			alert("pagina cargada")
 		});
 		
